@@ -81,19 +81,21 @@ console.log(total);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 
-// // while the number of parts is more than 6, we need to subtract 7 from the total parts. 
-// // each time we subtract 7 we should push a box into another array called box count. 
-// // ^this should happen in the loop
-// // after we do this we could console.log the number that parts is equal to so we can see if it is working
-// // out side the loop we could then log the number of parts again to see how many are left.
-// console.log('9. Filling boxes with a "while" loop');
+// while the number of parts is more than 6, we need to subtract 7 from the total parts. 
+// each time we subtract 7 we should push a box into another array called box count. 
+// ^this should happen in the loop
+// after we do this we could console.log the number that parts is equal to so we can see if it is working
+// out side the loop we could then log the number of parts again to see how many are left.
+// if we console log the .length of the boxCount array we will get how many boxes we filled.
+
+console.log('9. Filling boxes with a "while" loop');
 let partsToShip = 572;
 let boxCount = [];
 
-// while( partsToShip > 6){
-//     console.log( partsToShip-7 );
-//     boxCount.push( 'box' );
-//     partsToShip-7;
-// }//end while
+while( partsToShip>6 ){
+    partsToShip = partsToShip-7;
+    boxCount.push( 'box' );
+}//end while
 
-// console.log( partsToShip );
+console.log( 'Boxes filled:', boxCount.length );
+console.log( 'Parts left over:', partsToShip );
